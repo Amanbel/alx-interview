@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""
+pascals triangle
+"""
 
 def pascal_triangle(n):
+    """ implementing
+    pascals triangle
+    """
     if n <= 0:
         return []
     triangle = []
