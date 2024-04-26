@@ -20,4 +20,6 @@ def minOperations(n: int) -> int:
             sum += div
         else:
             div += 1
+    if n == sum:
+        return sum + 1
     return sum
