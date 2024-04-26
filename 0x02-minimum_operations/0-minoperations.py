@@ -4,15 +4,15 @@ finding the minimum operation needed
 """
 
 
-def minOperations(n: int) -> int:
+def minOperations(n):
     """
     function that returns
     the minimum operations needed
     """
-    temp: int = n
-    div: int = 2
-    sum: int = 0
-    if n == 0:
+    temp = n
+    div = 2
+    sum = 0
+    if n < div:
         return 0
     while temp != 1:
         if (temp % div == 0):
