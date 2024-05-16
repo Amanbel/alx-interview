@@ -21,6 +21,8 @@ def isWinner(x, nums):
             for i in range(1, n + 1):
                 if ben % i == 0:
                     bensSet.append(i)
+            if n == 1:
+                bensSet.append(1)
             maria += 1
             ben += 1
     if len(bensSet) > len(mariasSet):
