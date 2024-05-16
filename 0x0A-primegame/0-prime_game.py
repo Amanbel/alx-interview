@@ -15,14 +15,14 @@ def isWinner(x, nums):
     while x > 0:
         x -= 1
         for n in nums:
-            maria += 1
-            ben += 1
             for i in range(1, n + 1):
                 if maria % i == 0:
                     mariasSet.append(i)
             for i in range(1, n + 1):
                 if ben % i == 0:
                     bensSet.append(i)
+            maria += 1
+            ben += 1
     if len(bensSet) > len(mariasSet):
         return "Ben"
     elif len(bensSet) == len(mariasSet):
