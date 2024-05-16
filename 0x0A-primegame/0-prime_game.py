@@ -1,10 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 interview question - find winner
 """
 
 
 def isWinner(x, nums):
+    """
+    function that returns the winner
+    """
     maria = 2
     mariasSet = []
     ben = 3
