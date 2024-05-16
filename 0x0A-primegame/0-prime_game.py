@@ -17,19 +17,27 @@ def isWinner(x, nums):
     while x > 0:
         x -= 1
         for n in nums:
-            for i in range(1, n + 1):
-                if maria % i == 0:
-                    mariasSet.append(i)
-                    mariasPick.append(i)
-            for i in range(1, n + 1):
-                if ben in mariasPick:
-                    ben += 1
-                if ben % i == 0:
-                    bensSet.append(i)
-            if n == 1:
-                bensSet.append(1)
-            maria += 1
-            ben += 1
+            while len(mariasPick + bensPick) + 1 != n:
+                for i in range(1, n + 1):
+                    if i in bensPick:
+                        continue
+                    if maria % i == 0:
+                        mariasSet.append(i)
+                        mariasPick.append(i)
+                for i in range(1, n + 1):
+                    if i in mariasPick:
+                        continue
+                    if ben % i == 0:
+                        bensSet.append(i)
+                        bensPick.append(i)
+                if n == 1:
+                    bensSet.append(1)
+                maria += 1
+                ben += 1
+            mariasPick = []
+            bensPick = []
+            maria = 2
+            ben = 3
     if len(bensSet) > len(mariasSet):
         return "Ben"
     elif len(bensSet) == len(mariasSet):
